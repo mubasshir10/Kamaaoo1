@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+    position: relative;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.navbar-logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.navbar-logo img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* Background Images */
+.background-images {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    animation: slideIn 2s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.background-images img {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+    animation: zoomIn 3s ease-in-out;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    animation: fadeSlideIn 1.8s ease-out;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Image Section */
+.image-section {
+    flex: 1;
+    position: relative;
+    animation: fadeInFromLeft 2s ease-out;
+}
+
+@keyframes fadeInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: bounceIn 1.5s ease-out;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.image-section img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.image-section .founder-title {
+    position: absolute;
+    left: 40%;
+    transform: translateX(-50%);
+    background: #ff6363;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: popIn 1.2s ease-in-out;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8) translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Text Section */
+.text-section {
+    flex: 1;
+    animation: fadeInFromRight 2s ease-out;
+}
+
+@keyframes fadeInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.text-section h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #ff6363;
+    margin-bottom: 20px;
+    animation: slideInTop 1.5s ease-out;
+}
+
+@keyframes slideInTop {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.text-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.text-section .explore-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #ff6363;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 25px;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.4);
+    animation: popIn 1.2s ease-in-out;
+}
+
+.text-section .explore-btn:hover {
+    background: #5753d6;
+    transform: translateY(-5px);
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #ff6363;
+    color: #ffffff;
+    padding: 50px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1 1 200px;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-column p,
+.footer-column ul {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #ffffff; 
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #ffffff;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #c8d8e4;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+
+    </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+        <a href="#" class="navbar-logo">
+            <img src="your-logo.png" alt="Kamaaoo Logo" />
+        </a>
+    </div>
+</nav>
+
+    <div class="background-images">
+        <img src="assets/images/slider-left-dec.jpg" alt="Background 1">
+        <img src="assets/images/services-left-dec.jpg" alt="Background 2">
+        <img src="assets/images/slider-right-dec.jpg" alt="Background 5">
+    </div>
+    <div class="container">
+        <div class="image-section">
+            <img src="assets/images/founderlogo.png" alt="Founder">
+            <div class="founder-title">Ceo and Founder FARZAAN HUSSAIN</div>
+        </div>
+        <div class="text-section">
+            <h1>A Bit About Us</h1>
+            <p>
+              Kamaaao.com is a cutting-edge platform designed to:
+              Empower startups by connecting them with the right investors.
+              Accelerate innovation by fostering meaningful partnerships.
+              Create a seamless process for funding and partnership building.
+            </p>
+            <a href="index.html" class="explore-btn">Explore More</a>
+        </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+          <div class="footer-column">
+              <h3>About Us</h3>
+              <p>
+                  Kamaaoo.com connects entrepreneurs and investors with seamless opportunities. 
+                  Explore the possibilities of financial growth with us.
+              </p>
+          </div>
+          <div class="footer-column">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="index.html">Services</a></li>
+                  <li><a href="about.html">Contact</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>Contact Us</h3>
+              <p>Email: info@kamaaoo.com</p>
+              <p>Phone: +91 12345 67890</p>
+              <p>Address: Your Address, India</p>
+          </div>
+          <div class="footer-column">
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <p>&copy; 2025 Kamaaoo.com. All rights reserved.</p>
+      </div>
+  </footer>
+  </body>
+</html>

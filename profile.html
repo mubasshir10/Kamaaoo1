@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investor Profile</title>
+    <link rel="stylesheet" href="Profile.css">
+</head>
+<body>
+
+    
+
+    <div class="profile-header">
+        <h1>Investor Profile</h1>
+        <div class="search-container">
+            <input type="text" id="searchBox" placeholder="Search profiles...">
+            <select id="filterBox">
+                <option value="all">All</option>
+                <option value="name">Name</option>
+                <option value="expertise">Expertise</option>
+                <option value="role">Role</option>
+            </select>
+            <button type="button" onclick="filterProfiles()">Search</button>
+        </div>
+    </div>
+    <div class="profile-container">
+        <div class="profile-section" id="personal-info">
+            <h2>Personal Information</h2>
+            <div class="profile-item">
+                <p><strong>Name:</strong> <span id="profile-name"></span></p>
+            </div>
+            <div class="profile-item">
+                <p><strong>Email:</strong> <span id="profile-email"></span></p>
+            </div>
+            <div class="profile-item">
+                <p><strong>Type of Business:</strong> <span id="profile-business-type"></span></p>
+            </div>
+            <div class="profile-item">
+                <p><strong>Industry of Interest:</strong> <span id="profile-industry"></span></p>
+            </div>
+        </div>
+        <div class="profile-section" id="investment-details">
+            <h2>Investment Details</h2>
+            <form id="investment-questionnaire">
+                <h3>1. Investor Background</h3>
+                <div class="profile-item">
+                    <label for="background">What is your professional background and experience in investments?</label>
+                    <textarea id="background" name="background"></textarea>
+                </div>
+                <div class="profile-item">
+                    <label for="industry-experience">Have you invested in businesses within my industry or similar industries before?</label>
+                    <textarea id="industry-experience" name="industry-experience"></textarea>
+                </div>
+                <div class="profile-item">
+                    <label for="investment-count">How many businesses or startups have you invested in so far?</label>
+                    <input type="number" id="investment-count" name="investment-count">
+                </div>
+                <div class="profile-item">
+                    <label for="successful-ventures">Can you share examples of successful ventures you've been involved in?</label>
+                    <textarea id="successful-ventures" name="successful-ventures"></textarea>
+                </div>
+                <div class="profile-item">
+                    <label for="investment-philosophy">What is your investment philosophy (long-term, short-term, strategic)?</label>
+                    <textarea id="investment-philosophy" name="investment-philosophy"></textarea>
+                </div>
+
+                <h3>2. Financial Capacity</h3>
+                <div class="profile-item">
+                    <label for="investment-range">What is your typical investment range (minimum and maximum)?</label>
+                    <input type="text" id="investment-range" name="investment-range">
+                </div>
+                <div class="profile-item">
+                    <label for="follow-up-funding">Are you willing to provide follow-up funding if needed?</label>
+                    <select id="follow-up-funding" name="follow-up-funding">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="profile-item">
+                    <label for="financial-constraints">Do you have any financial constraints that might impact future contributions?</label>
+                    <textarea id="financial-constraints" name="financial-constraints"></textarea>
+                </div>
+                <div class="profile-item">
+                    <label for="investment-representation">Are you investing personally, or do you represent a fund or group of investors?</label>
+                    <textarea id="investment-representation" name="investment-representation"></textarea>
+                </div>
+
+                <h3>3. Expectations and Goals</h3>
+                <div class="profile-item">
+                    <label for="roi-timeframe">What are your expectations regarding return on investment (ROI) and timeframe?</label>
+                    <textarea id="roi-timeframe" name="roi-timeframe"></textarea>
+                </div>
+                <div class="profile-item">
+                    <label for="investment-structure">Are you seeking equity, debt, or a hybrid investment structure?</label>
+                    <select id="investment-structure" name="investment-structure">
+                        <option value="equity">Equity</option>
+                        <option value="debt">Debt</option>
+                        <option value="hybrid">Hybrid</option>
+                    </select>
+                </div>
+                <div class="profile-item">
+                    <label for="role-in-business">What role would you like to play in the business (active involvement, advisory, passive investor)?</label>
+                    <textarea id="role-in-business" name="role-in-business"></textarea>
+                </div>
+                <div class="profile-item">
+                    <label for="milestones">Do you have specific milestones or performance metrics you expect the company to meet?</label>
+                    <textarea id="milestones" name="milestones"></textarea>
+                </div>
+
+                <h3>4. Industry Knowledge and Network</h3>
+                <div class="profile-item">
+                    <label for="industry-knowledge">How familiar are you with the challenges and opportunities in this industry?</label>
+                    <textarea id="industry-knowledge" name="industry-knowledge"></textarea>
+                </div>
+                <div class="profile-item">
+                    <label for="strategic-advice">Can you provide strategic advice or mentorship for scaling the business?</label>
+                    <textarea id="strategic-advice" name="strategic-advice"></textarea>
+                </div>
+                <div class="profile-item">
+                    <label for="network-connections">Do you have a network of industry connections that could benefit the business (clients, suppliers, partners)?</label>
+                    <textarea id="network-connections" name="network-connections"></textarea>
+                </div>
+                <div class="profile-item">
+                    <label for="geographic-area">Have you worked with businesses in my geographic area or target market?</label>
+                    <textarea id="geographic-area" name="geographic-area"></textarea>
+                </div>
+
+                <h3>5. Investment Terms</h3>
+                <div class="profile-item">
+                    <label for="investment-terms">What are the key terms you are looking for in the investment agreement?</label>
+                    <textarea id="investment-terms" name="investment-terms"></textarea>
+                </div>
+                <div class="profile-item">
+                    <label for="non-negotiable-clauses">Are there any non-negotiable clauses or conditions?</label>
+                    <textarea id="non-negotiable-clauses" name="non-negotiable-clauses"></textarea>
+                </div>
+                <div class="profile-item">
+                    <label for="conflict-resolution">How do you handle conflicts of interest or disagreements with the founder(s)?</label>
+                    <textarea id="conflict-resolution" name="conflict-resolution"></textarea>
+                </div>
+                <div class="profile-item">
+                    <label for="future-funding">Are you open to dilution in future funding rounds?</label>
+                    <select id="future-funding" name="future-funding">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <h3>6. Risk Tolerance</h3>
+                <div class="profile-item">
+                    <label for="risk-level">What level of risk are you comfortable with in this investment?</label>
+                    <textarea id="risk-level" name="risk-level"></textarea>
+                </div>
+                <div class="profile-item">
+                    <label for="setbacks">How do you typically handle setbacks or challenges in your portfolio companies?</label>
+                    <textarea id="setbacks" name="setbacks"></textarea>
+                </div>
+                <div class="profile-item">
+                    <label for="contingency-plans">Do you have contingency plans for businesses that underperform?</label>
+                    <textarea id="contingency-plans" name="contingency-plans"></textarea>
+                </div>
+
+                <h3>7. Time Commitment</h3>
+                <div class="profile-item">
+                    <label for="time-commitment">How much time and involvement can you dedicate to this business?</label>
+                    <textarea id="time-commitment" name="time-commitment"></textarea>
+                </div>
+                <div class="profile-item">
+                    <label for="board-advisory">Are you willing to join the board of directors or advisory panel if needed?</label>
+                    <select id="board-advisory" name="board-advisory">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="profile-item">
+                    <label for="update-frequency">How frequently do you prefer updates on the company’s progress?</label>
+                    <textarea id="update-frequency" name="update-frequency"></textarea>
+                </div>
+
+                <h3>8. Exit Strategy</h3>
+                <div class="profile-item">
+                    <label for="exit-strategy">What is your preferred exit strategy (e.g., IPO, acquisition, buyback)?</label>
+                    <textarea id="exit strategy" name="exit strategy"></textarea>
+                    </div>
+                    
+                    <div class="profile-item">
+                        <label for="update-frequency">What is your expected timeline for exiting the investment?</label>
+                        <textarea id="update-frequency" name="update-frequency"></textarea>
+                    </div>
+                
+                    <div class="profile-item">
+                        <label for="update-frequency">Are you open to remaining invested long-term if the business scales slower than expected?</label>
+                        <textarea id="update-frequency" name="update-frequency"></textarea>
+                    </div>
+
+                    <h3>9. Legal and Compliance</h3>
+                    <div class="profile-item">
+                        <label for="exit-strategy">Do you have an investment team or legal advisor we can liaise with for due diligence?</label>
+                        <textarea id="exit strategy" name="exit strategy"></textarea>
+                    </div>
+                    
+                    <div class="profile-item">
+                        <label for="exit-strategy">Are you familiar with and compliant with all relevant investment regulations?</label>
+                        <textarea id="exit strategy" name="exit strategy"></textarea>
+                    </div>
+
+                    <div class="profile-item">
+                        <label for="exit-strategy">Are there any legal or financial issues that might affect your ability to invest?</label>
+                        <textarea id="exit strategy" name="exit strategy"></textarea>
+                    </div>
+
+                    <h3>10. Aligment with Vision</h3>
+                    <div class="profile-item">
+                        <label for="exit-strategy">Why are you interested in investing in this specific business?</label>
+                        <textarea id="exit strategy" name="exit strategy"></textarea>
+                    </div>
+                    
+                    <div class="profile-item">
+                        <label for="exit-strategy">How do you see your values aligning with the company’s mission and vision?</label>
+                        <textarea id="exit strategy" name="exit strategy"></textarea>
+                    </div>
+
+                    <div class="profile-item">
+                        <label for="exit-strategy">Do you have any specific suggestions or concerns about the business model or strategy?</label>
+                        <textarea id="exit strategy" name="exit strategy"></textarea>
+                    </div>
+
+                    
+                </form>
+            
+        <button type="submit" class="submit-btn">Save Details</button>
+    </div>
+
+
+    <div class="profile-section scrollable" id="investment-details">
+        <h2>Want to Invest as a Royalty?</h2>
+        <form id="investment-questionnaire">
+            <h3>1. Investor’s Expectations</h3>
+            <div class="profile-item">
+                <label for="royalty-percentage">What percentage of revenue or sales are you seeking as a royalty?</label>
+                <input type="text" id="royalty-percentage" name="royalty-percentage">
+            </div>
+            <div class="profile-item">
+                <label for="royalty-basis">Is the royalty based on gross revenue or net profit?</label>
+                <input type="text" id="royalty-basis" name="royalty-basis">
+            </div>
+            <div class="profile-item">
+                <label for="royalty-structure">Are you expecting a fixed royalty rate or a tiered structure?</label>
+                <input type="text" id="royalty-structure" name="royalty-structure">
+            </div>
+            <div class="profile-item">
+                <label for="royalty-duration">For how long will the royalty payments continue?</label>
+                <input type="text" id="royalty-duration" name="royalty-duration">
+            </div>
+
+            <h3>2. Investment Details</h3>
+            <div class="profile-item">
+                <label for="capital">How much capital are you willing to invest?</label>
+                <input type="text" id="capital" name="capital">
+            </div>
+            <div class="profile-item">
+                <label for="disbursement">Will the investment be disbursed as a lump sum or in installments?</label>
+                <input type="text" id="disbursement" name="disbursement">
+            </div>
+            <div class="profile-item">
+                <label for="conditions">Are there any conditions or milestones tied to the disbursement of funds?</label>
+                <input type="text" id="conditions" name="conditions">
+            </div>
+
+            <h3>3. Royalty Payment Terms</h3>
+            <div class="profile-item">
+                <label for="royalty-begin">When will royalty payments begin?</label>
+                <input type="text" id="royalty-begin" name="royalty-begin">
+            </div>
+            <div class="profile-item">
+                <label for="royalty-frequency">How frequently do you expect royalty payments?</label>
+                <input type="text" id="royalty-frequency" name="royalty-frequency">
+            </div>
+            <div class="profile-item">
+                <label for="royalty-cap">Is there a cap on total royalty payments?</label>
+                <input type="text" id="royalty-cap" name="royalty-cap">
+            </div>
+            <div class="profile-item">
+                <label for="royalty-documentation">How will royalty payments be documented and verified?</label>
+                <input type="text" id="royalty-documentation" name="royalty-documentation">
+            </div>
+
+            <h3>4. Business Revenue Forecast</h3>
+            <div class="profile-item">
+                <label for="revenue-projections">What are the expected revenue and sales projections for the next 3–5 years?</label>
+                <input type="text" id="revenue-projections" name="revenue-projections">
+            </div>
+            <div class="profile-item">
+                <label for="revenue-fluctuations">How will fluctuations in revenue impact royalty payments?</label>
+                <input type="text" id="revenue-fluctuations" name="revenue-fluctuations">
+            </div>
+            <div class="profile-item">
+                <label for="revenue-obligations">What happens if the business cannot meet royalty obligations in certain periods?</label>
+                <input type="text" id="revenue-obligations" name="revenue-obligations">
+            </div>
+
+            <h3>5. Investor Involvement</h3>
+            <div class="profile-item">
+                <label for="investor-role">Do you want an active role in the business, or will you remain a passive investor?</label>
+                <input type="text" id="investor-role" name="investor-role">
+            </div>
+            <div class="profile-item">
+                <label for="investor-resources">Will you provide additional resources like mentorship, expertise, or connections?</label>
+                <input type="text" id="investor-resources" name="investor-resources">
+            </div>
+            <div class="profile-item">
+                <label for="investor-access">Do you expect access to operational and financial data to monitor the business?</label>
+                <input type="text" id="investor-access" name="investor-access">
+            </div>
+
+            <h3>6. Risk and Exit Strategy</h3>
+            <div class="profile-item">
+                <label for="failure-scenario">What happens if the business fails to generate enough revenue for royalty payments?</label>
+                <input type="text" id="failure-scenario" name="failure-scenario">
+            </div>
+            <div class="profile-item">
+                <label for="buyout-option">Is there an option for the business to buy out the royalty agreement at a future date?</label>
+                <input type="text" id="buyout-option" name="buyout-option">
+            </div>
+            <div class="profile-item">
+                <label for="termination-conditions">Under what conditions can either party terminate the royalty agreement?</label>
+                <input type="text" id="termination-conditions" name="termination-conditions">
+            </div>
+            <div class="profile-item">
+                <label for="dispute-resolution">How will disputes regarding royalty calculations or payments be resolved?</label>
+                <input type="text" id="dispute-resolution" name="dispute-resolution">
+            </div>
+
+            <h3>7. Legal and Tax Implications</h3>
+            <div class="profile-item">
+                <label for="tax-implications">Are there any tax implications for the royalty payments for either party?</label>
+                <input type="text" id="tax-implications" name="tax-implications">
+            </div>
+            <div class="profile-item">
+                <label for="legal-contract">Will the royalty agreement be formalized through a legal contract?</label>
+                <input type="text" id="legal-contract" name="legal-contract">
+            </div>
+            <div class="profile-item">
+                <label for="jurisdictional-regulations">Are there jurisdictional regulations governing royalties that need to be addressed?</label>
+                <input type="text" id="jurisdictional-regulations" name="jurisdictional-regulations">
+            </div>
+
+            <h3>8. Alignment and Motivation</h3>
+            <div class="profile-item">
+                <label for="royalty-preference">Why do you prefer a royalty model over equity or profit-sharing?</label>
+                <input type="text" id="royalty-preference" name="royalty-preference">
+            </div>
+
+            <div class="profile-item">
+                <label for="royalty-preference">Are you open to revisiting or renegotiating the royalty terms based on business performance?</label>
+                <input type="text" id="royalty-preference" name="royalty-preference">
+            </div>
+    
+            <div class="profile-item">
+                <label for="royalty-preference">How does this royalty agreement align with your expectations for return on investment?</label>
+                <input type="text" id="royalty-preference" name="royalty-preference">
+            </div>
+        </form>
+            
+        <button type="submit" class="submit-btn">Save Details</button>
+    </div>
+
+
+    <section class="suggested-entrepreneurs">
+        <h2>Suggested Entrepreneur Profiles</h2>
+        <div class="entrepreneur-container">
+            <div class="entrepreneur-box">
+                <img src="profile1.jpg" alt="Profile 1">
+                <h3>Jane Smith</h3>
+                <p>Founder of Tech Innovators, Expert in AI</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile2.jpg" alt="Profile 2">
+                <h3>John Doe</h3>
+                <p>CEO of Startup Success, Marketing Guru</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile3.jpg" alt="Profile 3">
+                <h3>Alice Johnson</h3>
+                <p>Co-founder of Green Solutions, Eco-enthusiast</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile4.jpg" alt="Profile 4">
+                <h3>Michael Brown</h3>
+                <p>CEO of FinTech Pioneers, Finance Expert</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile5.jpg" alt="Profile 5">
+                <h3>Susan Lee</h3>
+                <p>Founder of Health First, Wellness Advocate</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile6.jpg" alt="Profile 6">
+                <h3>David Wilson</h3>
+                <p>Co-founder of EcoTech, Environmental Innovator</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile7.jpg" alt="Profile 7">
+                <h3>Emily Davis</h3>
+                <p>CEO of EdTech Solutions, Education Specialist</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile8.jpg" alt="Profile 8">
+                <h3>Robert Johnson</h3>
+                <p>Founder of Urban Innovations, Smart City Planner</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile9.jpg" alt="Profile 9">
+                <h3>Alice Brown</h3>
+                <p>CEO of Social Impact Ventures, Community Leader</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile10.jpg" alt="Profile 10">
+                <h3>Ravi Kumar</h3>
+                <p>Founder of Bharat Innovators, Technology Expert</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile11.jpg" alt="Profile 11">
+                <h3>Neha Sharma</h3>
+                <p>Co-founder of Eco India, Sustainability Advocate</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile12.jpg" alt="Profile 12">
+                <h3>Arjun Patel</h3>
+                <p>CEO of Smart Solutions, Tech Innovator</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile13.jpg" alt="Profile 13">
+                <h3>Priya Verma</h3>
+                <p>Founder of Women Empower, Advocate for Gender Equality</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile14.jpg" alt="Profile 14">
+                <h3>Rahul Singh</h3>
+                <p>CEO of AgriTech Solutions, Agricultural Innovator</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile15.jpg" alt="Profile 15">
+                <h3>Anita Nair</h3>
+                <p>Founder of Health India, Healthcare Specialist</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile16.jpg" alt="Profile 16">
+                <h3>Deepak Gupta</h3>
+                <p>Founder of Solar Innovations, Renewable Energy Expert</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile17.jpg" alt="Profile 17">
+                <h3>Aditi Mehta</h3>
+                <p>CEO of FinTech India, Finance Innovator</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile18.jpg" alt="Profile 18">
+                <h3>Karan Singh</h3>
+                <p>Founder of Urban Tech, Smart City Developer</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile19.jpg" alt="Profile 19">
+                <h3>Saira Khan</h3>
+                <p>Co-founder of Green Earth, Environmental Advocate</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile20.jpg" alt="Profile 20">
+                <h3>Anil Malhotra</h3>
+                <p>CEO of TechBridge, Technology Solutions Expert</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile21.jpg" alt="Profile 21">
+                <h3>Meera Desai</h3>
+                <p>Founder of Wellness Wave, Health Innovator</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile22.jpg" alt="Profile 22">
+                <h3>Rajesh Verma</h3>
+                <p>CEO of AgriFuture, Agricultural Technologist</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile23.jpg" alt="Profile 23">
+                <h3>Ananya Kapoor</h3>
+                <p>Co-founder of Urban Ventures, City Planner</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile24.jpg" alt="Profile 24">
+                <h3>Suresh Reddy</h3>
+                <p>Founder of EduWorld, Education Reformer</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile25.jpg" alt="Profile 25">
+                <h3>Kavita Rao</h3>
+                <p>CEO of HealthFirst, Medical Innovator</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile26.jpg" alt="Profile 26">
+                <h3>Vikram Iyer</h3>
+                <p>Founder of CleanTech, Environmental Tech Expert</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile27.jpg" alt="Profile 27">
+                <h3>Rina Shah</h3>
+                <p>Co-founder of Women's Wave, Social Entrepreneur</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile28.jpg" alt="Profile 28">
+                <h3>Shivam Tiwari</h3>
+                <p>CEO of NextGen Tech, Innovator in AI</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile29.jpg" alt="Profile 29">
+                <h3>Geeta Joshi</h3>
+                <p>Founder of Clean Energy, Renewable Energy Specialist</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile30.jpg" alt="Profile 30">
+                <h3>Arvind Nair</h3>
+                <p>Co-founder of Smart Solutions, Tech Visionary</p>
+                <a href="#">View Profile</a>
+            </div>
+            
+            <div class="entrepreneur-box">
+                <img src="profile31.jpg" alt="Profile 31">
+                <h3>Megha Reddy</h3>
+                <p>Founder of Solar Solutions, Renewable Energy Advocate</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile32.jpg" alt="Profile 32">
+                <h3>Gopal Das</h3>
+                <p>CEO of AgriPro, Agricultural Technology Innovator</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile33.jpg" alt="Profile 33">
+                <h3>Ritu Gupta</h3>
+                <p>Founder of HealthCare India, Medical Pioneer</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile34.jpg" alt="Profile 34">
+                <h3>Vijay Khanna</h3>
+                <p>CEO of SmartEnergy, Sustainable Energy Expert</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile35.jpg" alt="Profile 35">
+                <h3>Divya Patel</h3>
+                <p>Co-founder of CleanTech India, Environmental Engineer</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile36.jpg" alt="Profile 36">
+                <h3>Arjun Mehta</h3>
+                <p>Founder of Urban Innovations, Urban Planner</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile37.jpg" alt="Profile 37">
+                <h3>Lakshmi Prasad</h3>
+                <p>CEO of Health Innovators, Wellness Specialist</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile38.jpg" alt="Profile 38">
+                <h3>Nikhil Chandra</h3>
+                <p>Co-founder of Eco Warriors, Green Tech Advocate</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile39.jpg" alt="Profile 39">
+                <h3>Pooja Jain</h3>
+                <p>Founder of Women Empowerment, Social Entrepreneur</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile40.jpg" alt="Profile 40">
+                <h3>Rohan Desai</h3>
+                <p>CEO of Agri Solutions, Agricultural Expert</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile41.jpg" alt="Profile 41">
+                <h3>Sanya Singh</h3>
+                <p>Founder of TechHub, Technology Innovator</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile42.jpg" alt="Profile 42">
+                <h3>Akhil Sharma</h3>
+                <p>CEO of Green Earth, Environmental Specialist</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile43.jpg" alt="Profile 43">
+                <h3>Rekha Sinha</h3>
+                <p>Co-founder of HealthTech, Medical Innovator</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile44.jpg" alt="Profile 44">
+                <h3>Manish Pandey</h3>
+                <p>Founder of Smart Solutions, Tech Expert</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile45.jpg" alt="Profile 45">
+                <h3>Anjali Roy</h3>
+                <p>CEO of Women's World, Social Impact Leader</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile46.jpg" alt="Profile 46">
+                <h3>Vivek Kumar</h3>
+                <p>Co-founder of Eco Solutions, Green Technology Expert</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile47.jpg" alt="Profile 47">
+                <h3>Shruti Agarwal</h3>
+                <p>Founder of Edu Innovators, Education Specialist</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile48.jpg" alt="Profile 48">
+                <h3>Amar Jha</h3>
+                <p>CEO of Smart City, Urban Development Expert</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile49.jpg" alt="Profile 49">
+                <h3>Parvati Nair</h3>
+                <p>Founder of Green Innovations, Environmental Advocate</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile50.jpg" alt="Profile 50">
+                <h3>Vikas Bhatia</h3>
+                <p>Co-founder of HealthWave, Wellness Innovator</p>
+                <a href="#">View Profile</a>
+            </div>
+            
+            <div class="entrepreneur-box">
+                <img src="profile51.jpg" alt="Profile 51">
+                <h3>Ravi Kapoor</h3>
+                <p>Founder of TechVision, Technology Strategist</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile52.jpg" alt="Profile 52">
+                <h3>Ananya Verma</h3>
+                <p>CEO of Health Harmony, Wellness Expert</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile53.jpg" alt="Profile 53">
+                <h3>Manoj Thakur</h3>
+                <p>Co-founder of EcoFuture, Environmental Innovator</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile54.jpg" alt="Profile 54">
+                <h3>Neeta Singh</h3>
+                <p>Founder of Smart Tech, Tech Solutions Expert</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile55.jpg" alt="Profile 55">
+                <h3>Sandeep Rao</h3>
+                <p>CEO of Green Wave, Sustainability Leader</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile56.jpg" alt="Profile 56">
+                <h3>Preeti Sinha</h3>
+                <p>Founder of Women Innovate, Social Entrepreneur</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile57.jpg" alt="Profile 57">
+                <h3>Raghav Bansal</h3>
+                <p>CEO of Urban Development, City Planning Specialist</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile58.jpg" alt="Profile 58">
+                <h3>Leela Nair</h3>
+                <p>Co-founder of Clean Earth, Environmental Advocate</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile59.jpg" alt="Profile 59">
+                <h3>Shivani Joshi</h3>
+                <p>Founder of TechBridge, Innovation Leader</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile60.jpg" alt="Profile 60">
+                <h3>Amit Kumar</h3>
+                <p>CEO of Health Innovations, Medical Expert</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile61.jpg" alt="Profile 61">
+                <h3>Reema Gupta</h3>
+                <p>Founder of EduNext, Educational Reformer</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile62.jpg" alt="Profile 62">
+                <h3>Kunal Shah</h3>
+                <p>CEO of Agri Solutions, AgriTech Innovator</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile63.jpg" alt="Profile 63">
+                <h3>Mala Reddy</h3>
+                <p>Founder of Wellness World, Health Advocate</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile64.jpg" alt="Profile 64">
+                <h3>Vijay Patel</h3>
+                <p>Co-founder of Green Tech, Environmental Specialist</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile65.jpg" alt="Profile 65">
+                <h3>Anjali Mehta</h3>
+                <p>CEO of Tech World, Technology Visionary</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile66.jpg" alt="Profile 66">
+                <h3>Rajesh Sharma</h3>
+                <p>Founder of Smart Health, Medical Innovator</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile67.jpg" alt="Profile 67">
+                <h3>Bhavna Kapoor</h3>
+                <p>Co-founder of Urban Solutions, City Planner</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile68.jpg" alt="Profile 68">
+                <h3>Kiran Rao</h3>
+                <p>CEO of Eco Vision, Environmental Leader</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile69.jpg" alt="Profile 69">
+                <h3>Sara Ali</h3>
+                <p>Founder of Innovate India, Tech Innovator</p>
+                <a href="#">View Profile</a>
+            </div>
+            <div class="entrepreneur-box">
+                <img src="profile70.jpg" alt="Profile 70">
+                <h3>Mohit Jain</h3>
+                <p>CEO of AgriNext, Agricultural Technologist</p>
+                <a href="#">View Profile</a>
+            </div>
+            
+
+        </div>
+
+    </section>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Retrieve form data from localStorage
+            const profileData = JSON.parse(localStorage.getItem('investorFormData'));
+
+            // Populate profile fields
+            if (profileData) {
+                document.getElementById('profile-name').innerText = profileData.name;
+                document.getElementById('profile-email').innerText = profileData.email;
+                document.getElementById('profile-business-type').innerText = profileData.businessType;
+                document.getElementById('profile-industry').innerText = profileData.industry;
+            }
+
+            // Retrieve investment details data from localStorage
+            const investmentDetails = JSON.parse(localStorage.getItem('investmentDetails'));
+
+            // Populate investment details fields
+            if (investmentDetails) {
+                document.getElementById('investment-range').value = investmentDetails.investmentRange;
+                document.getElementById('follow-up-funding').value = investmentDetails.followUpFunding;
+                document.getElementById('financial-constraints').value = investmentDetails.financialConstraints;
+                document.getElementById('investment-type').value = investmentDetails.investmentType;
+                document.getElementById('involvement-role').value = investmentDetails.involvementRole;
+            }
+
+            // Handle questionnaire form submission
+            document.getElementById('investment-questionnaire').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Retrieve questionnaire data
+                const investmentRange = document.getElementById('investment-range').value;
+                const followUpFunding = document.getElementById('follow-up-funding').value;
+                const financialConstraints = document.getElementById('financial-constraints').value;
+                const investmentType = document.getElementById('investment-type').value;
+                const involvementRole = document.getElementById('involvement-role').value;
+
+                // Save questionnaire data to localStorage
+                const investmentDetails = {
+                    investmentRange: investmentRange,
+                    followUpFunding: followUpFunding,
+                    financialConstraints: financialConstraints,
+                    investmentType: investmentType,
+                    involvementRole: involvementRole
+                };
+
+                localStorage.setItem('investmentDetails', JSON.stringify(investmentDetails));
+
+                // Optionally, add a confirmation message or redirect
+                alert("Investment details saved successfully!");
+            });
+        });
+
+        function filterProfiles() {
+            const searchBox = document.getElementById('searchBox');
+            const filter = searchBox.value.toLowerCase();
+            const profileContainer = document.getElementById('profileContainer');
+            const profiles = profileContainer.getElementsByClassName('entrepreneur-box');
+
+            for (let i = 0; i < profiles.length; i++) {
+                const profile = profiles[i];
+                const text = profile.textContent || profile.innerText;
+                if (text.toLowerCase().indexOf(filter) > -1) {
+                    profile.style.display = "";
+                } else {
+                    profile.style.display = "none";
+                }
+            }
+        }
+
+        function filterProfiles() {
+            const searchBox = document.getElementById('searchBox');
+            const filterBox = document.getElementById('filterBox');
+            const filter = searchBox.value.toLowerCase();
+            const filterType = filterBox.value;
+            const profileContainer = document.getElementById('profileContainer');
+            const profiles = profileContainer.getElementsByClassName('entrepreneur-box');
+
+            for (let i = 0; i < profiles.length; i++) {
+                const profile = profiles[i];
+                let text = '';
+                if (filterType === 'name') {
+                    text = profile.getElementsByTagName('h3')[0].textContent || profile.getElementsByTagName('h3')[0].innerText;
+                } else if (filterType === 'expertise') {
+                    text = profile.getElementsByTagName('p')[0].textContent || profile.getElementsByTagName('p')[0].innerText;
+                } else if (filterType === 'role') {
+                    text = profile.getElementsByTagName('p')[1].textContent || profile.getElementsByTagName('p')[1].innerText;
+                } else {
+                    text = profile.textContent || profile.innerText;
+                }
+
+                if (text.toLowerCase().indexOf(filter) > -1) {
+                    profile.style.display = "";
+                } else {
+                    profile.style.display = "none";
+                }
+            }
+        }
+
+        const profiles = [
+    { name: "John Doe", expertise: "JavaScript", role: "Developer" },
+    { name: "Jane Smith", expertise: "Design", role: "Designer" },
+    // Add more profiles as needed
+];
+
+function filterProfiles() {
+    const searchBox = document.getElementById('searchBox').value.toLowerCase();
+    const filterBox = document.getElementById('filterBox').value;
+    let filteredProfiles = profiles;
+
+    if (filterBox !== "all") {
+        filteredProfiles = profiles.filter(profile => profile[filterBox].toLowerCase().includes(searchBox));
+    } else {
+        filteredProfiles = profiles.filter(profile => 
+            profile.name.toLowerCase().includes(searchBox) ||
+            profile.expertise.toLowerCase().includes(searchBox) ||
+            profile.role.toLowerCase().includes(searchBox)
+        );
+    }
+
+    displayProfiles(filteredProfiles);
+}
+
+function displayProfiles(filteredProfiles) {
+    // Display the filtered profiles
+    console.log(filteredProfiles);
+}
+
+
+    </script>
+</body>
+</html>

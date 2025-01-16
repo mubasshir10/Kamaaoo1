@@ -1,0 +1,257 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: #f3f4f6;
+    background-image: 
+    url('assets/images/blog-left-dec.jpg'),
+    url('assets/images/portfolio-left-dec.jpg'),
+    url('assets/images/another-image.jpg');
+    
+  background-position: 
+    left top, 
+    center center, 
+    right bottom;
+    
+  background-size: 
+    cover, 
+    contain, 
+    30% 30%;
+    
+  background-repeat: 
+    no-repeat, 
+    no-repeat, 
+    repeat;
+    
+  padding: 80px 0;
+  color: #fff;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#searchBox, #filterBox, #locationBox {
+    padding: 8px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+.profile-header {
+    width: 100%;
+    background-color: rgb(209, 209, 209);
+    background-image: image('assets/images/blog-left-dec.jpg');
+    color: black;
+    padding: 20px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 22px;
+}
+
+.profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.profile-section {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: calc(50% - 40px);
+    box-sizing: border-box;
+}
+
+.profile-section h2 {
+    color: #db4437;
+    margin-top: 0;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.profile-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-item p, .profile-item label, .profile-item textarea, .profile-item select, .profile-item input {
+    margin: 0;
+    font-size: 16px;
+    width: 100%;
+    color: black;
+}
+
+.profile-item input, .profile-item select, .profile-item textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    color: #000;
+}
+
+.profile-item textarea {
+    resize: vertical;
+    height: 80px;
+    color: #000;
+}
+
+h3{
+    color: #000;
+}
+
+.submit-btn {
+    background-color: #db4437;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #ff1500;
+}
+
+#investment-details {
+    max-height: 400px; /* Set the maximum height for the scrollable box */
+    overflow-y: auto;  /* Enable vertical scrolling */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: 
+    url('assets/images/blog-left-dec.jpg'),
+    url('assets/images/portfolio-left-dec.jpg'),
+    url('assets/images/another-image.jpg');
+    
+  background-position: 
+    left top, 
+    center center, 
+    right bottom;
+    
+  background-size: 
+    cover, 
+    contain, 
+    30% 30%;
+    
+  background-repeat: 
+    no-repeat, 
+    no-repeat, 
+    repeat;
+    
+  padding: 80px 0;
+  color: #fff;
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+
+
+}
+
+.suggested-entrepreneurs {
+    padding: 30px;
+    background-color: #f8f9fa;
+    margin-top: 20px;
+}
+
+.entrepreneur-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h2{
+    color: #000;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
+
+.entrepreneur-box {
+    width: 30%;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.entrepreneur-box img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.entrepreneur-box h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.entrepreneur-box p {
+    color: #555;
+}
+
+.entrepreneur-box a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.entrepreneur-box a:hover {
+    text-decoration: underline;
+}
+
+

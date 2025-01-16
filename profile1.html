@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile1.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="index.html">Services</a></li>
+                    <li><a href="about.html">Contact</a></li>
+                    <li><a href="index.html">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="profile-container">
+                <div class="profile-header">
+                    <div class="profile-picture">
+                        <img id="profile-pic" src="profile-placeholder.jpg" alt="Profile Picture">
+                    </div>
+                    <div class="profile-info">
+                        <h1 id="fullname">Full Name</h1>
+                        <p id="username">Username: @username</p>
+                    </div>
+                </div>
+                
+                <div class="card-container">
+                    <div class="card">
+                        <h2>Contact Info</h2>
+                        <p><strong>Email:</strong> <span id="email">Email will be here</span></p>
+                        <p><strong>Phone:</strong> <span id="phone">Phone number will be here</span></p>
+                    </div>
+                    <div class="card">
+                        <h2>Business Info</h2>
+                        <p><strong>Business Type:</strong> <span id="business-type">Business type will be here</span></p>
+                        <p><strong>Business Age:</strong> <span id="business-age">Business age will be here</span></p>
+                        <p><strong>Industry:</strong> <span id="industry">Industry will be here</span></p>
+                    </div>
+                    <div class="card">
+                        <h2>Description</h2>
+                        <p id="description">Description will be here</p>
+                    </div>
+                </div>
+                
+                <!-- First Question Box -->
+                <div class="question-box">
+                    <h3>Questions for Investors</h3>
+                    <form>
+                        <label for="q1-1">What percentage of revenue or sales are you seeking as a royalty?</label>
+                        <input type="text" id="q1-1" name="q1-1"><br>
+
+                        <label for="q1-2">Is the royalty based on gross revenue or net profit?</label>
+                        <input type="text" id="q1-2" name="q1-2"><br>
+
+                        <label for="q1-3">Are you expecting a fixed royalty rate or a tiered structure?</label>
+                        <input type="text" id="q1-3" name="q1-3"><br>
+
+                        <label for="q1-4">For how long will the royalty payments continue?</label>
+                        <input type="text" id="q1-4" name="q1-4"><br>
+
+                        <label for="q1-5">How much capital are you willing to invest?</label>
+                        <input type="text" id="q1-5" name="q1-5"><br>
+
+                        <label for="q1-6">Will the investment be disbursed as a lump sum or in installments?</label>
+                        <input type="text" id="q1-6" name="q1-6"><br>
+
+                        <label for="q1-7">Are there any conditions or milestones tied to the disbursement of funds?</label>
+                        <input type="text" id="q1-7" name="q1-7"><br>
+
+                        <label for="q1-8">When will royalty payments begin?</label>
+                        <input type="text" id="q1-8" name="q1-8"><br>
+
+                        <label for="q1-9">How frequently do you expect royalty payments?</label>
+                        <input type="text" id="q1-9" name="q1-9"><br>
+
+                        <label for="q1-10">Is there a cap on total royalty payments?</label>
+                        <input type="text" id="q1-10" name="q1-10"><br>
+
+                        <label for="q1-11">How will royalty payments be documented and verified?</label>
+                        <input type="text" id="q1-11" name="q1-11"><br>
+
+                        <label for="q1-12">What are the expected revenue and sales projections for the next 3–5 years?</label>
+                        <input type="text" id="q1-12" name="q1-12"><br>
+
+                        <label for="q1-13">How will fluctuations in revenue impact royalty payments?</label>
+                        <input type="text" id="q1-13" name="q1-13"><br>
+
+                        <label for="q1-14">What happens if the business cannot meet royalty obligations in certain periods?</label>
+                        <input type="text" id="q1-14" name="q1-14"><br>
+
+                        <label for="q1-15">Do you want an active role in the business, or will you remain a passive investor?</label>
+                        <input type="text" id="q1-15" name="q1-15"><br>
+
+                        <label for="q1-16">Will you provide additional resources like mentorship, expertise, or connections?</label>
+                        <input type="text" id="q1-16" name="q1-16"><br>
+
+                        <label for="q1-17">Do you expect access to operational and financial data to monitor the business?</label>
+                        <input type="text" id="q1-17" name="q1-17"><br>
+
+                        <label for="q1-18">What happens if the business fails to generate enough revenue for royalty payments?</label>
+                        <input type="text" id="q1-18" name="q1-18"><br>
+
+                        <label for="q1-19">Is there an option for the business to buy out the royalty agreement at a future date?</label>
+                        <input type="text" id="q1-19" name="q1-19"><br>
+
+                        <label for="q1-20">Under what conditions can either party terminate the royalty agreement?</label>
+                        <input type="text" id="q1-20" name="q1-20"><br>
+
+                        <label for="q1-21">How will disputes regarding royalty calculations or payments be resolved?</label>
+                        <input type="text" id="q1-21" name="q1-21"><br>
+
+                        <label for="q1-22">Are there any tax implications for the royalty payments for either party?</label>
+                        <input type="text" id="q1-22" name="q1-22"><br>
+
+                        <label for="q1-23">Will the royalty agreement be formalized through a legal contract?</label>
+                        <input type="text" id="q1-23" name="q1-23"><br>
+
+                        <label for="q1-24">Are there jurisdictional regulations governing royalties that need to be addressed?</label>
+                        <input type="text" id="q1-24" name="q1-24"><br>
+
+                        <label for="q1-25">Why do you prefer a royalty model over equity or profit-sharing?</label>
+                        <input type="text" id="q1-25" name="q1-25"><br>
+
+                        <label for="q1-26">Are you open to revisiting or renegotiating the royalty terms based on business performance?</label>
+                        <input type="text" id="q1-26" name="q1-26"><br>
+
+                        <label for="q1-27">How does this royalty agreement align with your expectations for return on investment?</label>
+                        <input type="text" id="q1-27" name="q1-27"><br>
+
+                        
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+<SCript>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Retrieve the stored data from localStorage
+            const profileData = JSON.parse(localStorage.getItem('formData'));
+
+            // Check if data exists in localStorage
+            if (profileData) {
+                // Populate the profile fields dynamically
+                document.getElementById("fullname").innerText = profileData.fullname;
+                document.getElementById("username").innerText = `Username: ${profileData.username}`;
+                document.getElementById("email").innerText = profileData.email;
+                document.getElementById("phone").innerText = profileData.phone;
+                document.getElementById("business-type").innerText = profileData.businessType;
+                document.getElementById("business-age").innerText = profileData.businessAge;
+                document.getElementById("industry").innerText = profileData.industry;
+                document.getElementById("description").innerText = profileData.description;
+
+                // If profile picture exists, display it
+                if (profileData.photo) {
+                    document.getElementById("profile-pic").src = profileData.photo;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="investorsignup.css">
+</head>
+<body>
+    <div class="signup-container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <img src="assets/images/Presentation_3D_scene-removebg-preview.png" alt="Inspirational Image" class="left-image">
+            <h1 class="fade-in">Create Your Account</h1>
+        </div>
+        
+        <!-- Right Section -->
+        <div class="right-section">
+            <h2 class="slide-in">Sign Up As an INVESTOR</h2>
+            <button class="social-signup google bounce-in">Continue with Google</button>
+            <button class="social-signup apple bounce-in">Continue with Apple</button>
+            <form id="signup-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your Password " required>
+                
+                <label for="business-type">Type of Business:</label>
+                <input type="text" id="business-type" name="business-type" placeholder="Type of Business" required>
+
+                <label for="industry">Want to invest in which Industry:</label>
+                <input type="text" id="industry" name="industry" placeholder="Type of Industry" required>
+
+                <div class="terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the Terms & Conditions</label>
+                </div>
+                
+                <button type="submit" class="signup-btn grow">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="login.html">Sign in</a></p>
+            <p>Want to Signup as an ENTREPRENEUR / BUSINESS? <a href="EntrepreneurSignUp.html">Sign up</a></p>
+
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Retrieve form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const businessType = document.getElementById('business-type').value;
+            const industry = document.getElementById('industry').value;
+
+            // Save form data to localStorage
+            const formData = {
+                name: name,
+                email: email,
+                password: password,
+                confirmPassword: confirmPassword,
+                businessType: businessType,
+                industry: industry
+            };
+
+            localStorage.setItem('investorFormData', JSON.stringify(formData));
+
+            // Redirect to the profile page
+            window.location.href = 'Profile.html';
+        });
+    </script>
+</body>
+</html>

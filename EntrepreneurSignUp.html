@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="entrepreneur.css">
+</head>
+<body>
+    <div class="signup-container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <img src="assets/images/test-removebg-preview.png" alt="Inspirational Image" class="left-image">
+            <h1 class="fade-in">Create Your Account</h1>
+        </div>
+        
+        <!-- Right Section -->
+        <div class="right-section">
+            <h2 class="slide-in">Sign Up As a Entrepreneur</h2>
+            <button class="social-signup google bounce-in">Continue with Google</button>
+            <button class="social-signup apple bounce-in">Continue with Apple</button>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your Password " required>
+                
+                <label for="business-type">Type of Business:</label>
+                <select id="business-type" name="business-type" required>
+                    <option value="Startup">Startup</option>
+                    <option value="Small Business">Small Business</option>
+                    <option value="Manufacturer">Manufacturer</option>
+                    <option value="Trader">Trader</option>
+                    <option value="Service Provider">Service Provider</option>
+                </select>
+
+                <label for="business-type">Industry:</label>
+                <select id="business-type" name="business-type" required>
+                    <option value="agriculture">Agriculture</option>
+                    <option value="automotive">Automotive</option>
+                    <option value="aviation">Aviation</option>
+                    <option value="biotechnology">Biotechnology</option>
+                    <option value="broadcasting">Broadcasting</option>
+                    <option value="chemical">Chemical</option>
+                    <option value="construction">Construction</option>
+                    <option value="consulting">Consulting</option>
+                    <option value="consumer-goods">Consumer Goods</option>
+                    <option value="defense">Defense</option>
+                    <option value="e-commerce">E-commerce</option>
+                    <option value="energy">Energy</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="environmental">Environmental</option>
+                    <option value="fashion">Fashion</option>
+                    <option value="film-production">Film Production</option>
+                    <option value="finance">Finance</option>
+                    <option value="food-beverage">Food & Beverage</option>
+                    <option value="forestry">Forestry</option>
+                    <option value="gaming">Gaming</option>
+                    <option value="graphic-design">Graphic Design</option>
+                    <option value="green-technology">Green Technology</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="hospitality">Hospitality</option>
+                    <option value="human-resources">Human Resources</option>
+                    <option value="import-export">Import/Export</option>
+                    <option value="industrial-machinery">Industrial Machinery</option>
+                    <option value="information-technology">Information Technology</option>
+                    <option value="insurance">Insurance</option>
+                    <option value="interior-design">Interior Design</option>
+                    <option value="jewelry">Jewelry</option>
+                    <option value="legal-services">Legal Services</option>
+                    <option value="logistics">Logistics</option>
+                    <option value="luxury-goods">Luxury Goods</option>
+                    <option value="manufacturing">Manufacturing</option>
+                    <option value="marine">Marine</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="media">Media</option>
+                    <option value="medical-devices">Medical Devices</option>
+                    <option value="mining">Mining</option>
+                    <option value="mobile-applications">Mobile Applications</option>
+                    <option value="music-production">Music Production</option>
+                    <option value="nonprofit">Nonprofit</option>
+                    <option value="oil-gas">Oil & Gas</option>
+                    <option value="packaging">Packaging</option>
+                    <option value="pharmaceuticals">Pharmaceuticals</option>
+                    <option value="photography">Photography</option>
+                    <option value="printing">Printing</option>
+                    <option value="public-relations">Public Relations</option>
+                    <option value="publishing">Publishing</option>
+                    <option value="real-estate">Real Estate</option>
+                    <option value="renewable-energy">Renewable Energy</option>
+                    <option value="research-development">Research & Development</option>
+                    <option value="retail">Retail</option>
+                    <option value="robotics">Robotics</option>
+                    <option value="safety-security">Safety & Security</option>
+                    <option value="software-development">Software Development</option>
+                    <option value="sports">Sports</option>
+                    <option value="telecommunications">Telecommunications</option>
+                    <option value="textile">Textile</option>
+                    <option value="transportation">Transportation</option>
+                    <option value="utilities">Utilities</option>
+                    <option value="veterinary">Veterinary</option>
+                    <option value="virtual-reality">Virtual Reality</option>
+                    <option value="waste-management">Waste Management</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="wellness-spa">Wellness & Spa</option>
+                    <option value="wholesale">Wholesale</option>
+                    <option value="woodworking">Woodworking</option>
+                    <option value="architecture">Architecture</option>
+                    <option value="arts-crafts">Arts & Crafts</option>
+                    <option value="baby-products">Baby Products</option>
+                    <option value="bakery">Bakery</option>
+                    <option value="beauty-products">Beauty Products</option>
+                    <option value="brewery">Brewery</option>
+                    <option value="car-rental">Car Rental</option>
+                    <option value="cleaning-services">Cleaning Services</option>
+                    <option value="co-working-spaces">Co-working Spaces</option>
+                    <option value="data-analytics">Data Analytics</option>
+                    <option value="dental-care">Dental Care</option>
+                    <option value="diet-nutrition">Diet & Nutrition</option>
+                    <option value="drone-services">Drone Services</option>
+                    <option value="education-technology">Education Technology</option>
+                    <option value="elderly-care">Elderly Care</option>
+                    <option value="event-planning">Event Planning</option>
+                    <option value="facility-management">Facility Management</option>
+                    <option value="florist">Florist</option>
+                    <option value="gardening">Gardening</option>
+                    <option value="hairdressing">Hairdressing</option>
+                    <option value="home-decor">Home Decor</option>
+                    <option value="landscaping">Landscaping</option>
+                    <option value="legal-tech">Legal Tech</option>
+                    <option value="locksmith">Locksmith</option>
+                    <option value="online-learning">Online Learning</option>
+                    <option value="pet-services">Pet Services</option>
+                    <option value="real-estate-development">Real Estate Development</option>
+                    <option value="recycling">Recycling</option>
+                    <option value="renewable-resources">Renewable Resources</option>
+                    <option value="social-media-management">Social Media Management</option>
+                    <option value="travel-agency">Travel Agency</option>
+                    <option value="books">Books</option>
+                    <option value="gym-fitness">Gym & Fitness</option>
+                    <option value="musical-instruments">Musical Instruments</option>
+                    <option value="sports-equipment">Sports Equipment</option>
+                    <option value="agriculture">Agriculture</option>
+    <option value="automotive">Automotive</option>
+    <option value="aviation">Aviation</option>
+    <option value="biotechnology">Biotechnology</option>
+    <!-- ... other options ... -->
+    <option value="wellness-spa">Wellness & Spa</option>
+    <option value="wholesale">Wholesale</option>
+    <option value="woodworking">Woodworking</option>
+    <option value="architecture">Architecture</option>
+    <!-- New industry options -->
+    <option value="aquaculture">Aquaculture</option>
+    <option value="artificial-intelligence">Artificial Intelligence</option>
+    <option value="augmented-reality">Augmented Reality</option>
+    <option value="baking-pastry">Baking & Pastry</option>
+    <option value="blockchain">Blockchain</option>
+    <option value="brewery">Brewery</option>
+    <option value="cannabis">Cannabis</option>
+    <option value="cloud-computing">Cloud Computing</option>
+    <option value="cybersecurity">Cybersecurity</option>
+    <option value="digital-marketing">Digital Marketing</option>
+    <option value="ecotourism">Ecotourism</option>
+    <option value="electric-vehicles">Electric Vehicles</option>
+    <option value="film-production">Film Production</option>
+    <option value="fitness-wellness">Fitness & Wellness</option>
+    <option value="food-truck">Food Truck</option>
+    <option value="gene-editing">Gene Editing</option>
+    <option value="green-building">Green Building</option>
+    <option value="home-automation">Home Automation</option>
+    <option value="home-security">Home Security</option>
+    <option value="honey-production">Honey Production</option>
+    <option value="hydropower">Hydropower</option>
+    <option value="influencer-marketing">Influencer Marketing</option>
+    <option value="internet-of-things">Internet of Things</option>
+    <option value="livestock">Livestock</option>
+    <option value="marine-biotechnology">Marine Biotechnology</option>
+    <option value="memes-viral-content">Memes & Viral Content</option>
+    <option value="metaverse">Metaverse</option>
+    <option value="mobile-game-development">Mobile Game Development</option>
+    <option value="nanotechnology">Nanotechnology</option>
+    <option value="natural-cosmetics">Natural Cosmetics</option>
+    <option value="ocean-cleanup">Ocean Cleanup</option>
+    <option value="off-grid-energy">Off-Grid Energy</option>
+    <option value="online-coaching">Online Coaching</option>
+    <option value="organic-farming">Organic Farming</option>
+    <option value="personal-finance">Personal Finance</option>
+    <option value="pet-care">Pet Care</option>
+    <option value="podcasting">Podcasting</option>
+    <option value="real-estate-investing">Real Estate Investing</option>
+    <option value="remote-work-solutions">Remote Work Solutions</option>
+    <option value="robotics-process-automation">Robotics Process Automation</option>
+    <option value="seed-production">Seed Production</option>
+    <option value="self-publishing">Self-Publishing</option>
+    <option value="smart-cities">Smart Cities</option>
+    <option value="social-enterprise">Social Enterprise</option>
+    <option value="solar-energy">Solar Energy</option>
+    <option value="space-tourism">Space Tourism</option>
+    <option value="sustainable-fashion">Sustainable Fashion</option>
+    <option value="telemedicine">Telemedicine</option>
+    <option value="tiny-homes">Tiny Homes</option>
+    <option value="urban-farming">Urban Farming</option>
+    <option value="virtual-events">Virtual Events</option>
+    <option value="voice-assistants">Voice Assistants</option>
+    <option value="wearable-tech">Wearable Tech</option>
+    <option value="wind-energy">Wind Energy</option>
+    <option value="zero-waste-products">Zero-Waste Products</option>
+    <!-- Additional industry options -->
+    <option value="handicrafts">Handicrafts</option>
+    <option value="holography">Holography</option>
+    <option value="horse-breeding">Horse Breeding</option>
+    <option value="horticulture">Horticulture</option>
+    <option value="innovation">Innovation</option>
+    <option value="jewelry-design">Jewelry Design</option>
+    <option value="jute-production">Jute Production</option>
+    <option value="karate-schools">Karate Schools</option>
+    <option value="language-services">Language Services</option>
+    <option value="landscaping">Landscaping</option>
+    <option value="leather-products">Leather Products</option>
+    <option value="lighting-design">Lighting Design</option>
+    <option value="mango-cultivation">Mango Cultivation</option>
+    <option value="mental-health">Mental Health</option>
+    <option value="mineral-extraction">Mineral Extraction</option>
+    <option value="networking-events">Networking Events</option>
+    <option value="nutraceuticals">Nutraceuticals</option>
+    <option value="online-education">Online Education</option>
+    <option value="online-marketplaces">Online Marketplaces</option>
+    <option value="plastic-recycling">Plastic Recycling</option>
+    <option value="property-management">Property Management</option>
+    <option value="renewable-materials">Renewable Materials</option>
+    <option value="salt-production">Salt Production</option>
+    <option value="shipping-logistics">Shipping & Logistics</option>
+    <option value="startup-incubators">Startup Incubators</option>
+    <option value="sustainable-agriculture">Sustainable Agriculture</option>
+    <option value="tech-consulting">Tech Consulting</option>
+    <option value="transportation-planning">Transportation Planning</option>
+    <option value="urban-planning">Urban Planning</option>
+    <option value="vertical-farming">Vertical Farming</option>
+    <option value="waste-reduction">Waste Reduction</option>
+    <option value="wine-production">Wine Production</option>
+    <option value="yoga-instruction">Yoga Instruction</option>
+    <option value="zoological-services">Zoological Services</option>
+  </select>
+
+  <label for="Age of Business">Age of Business</label>
+  <input type="number" id="Age of Business" name="Age of Business" placeholder="Age of Business" required>
+
+  <label for="Gross Profit AS per Financial Year:  ">Gross Profit AS per Financial Year:</label>
+  <input type="number" id="Age of Business" name="Age of Business" placeholder="Gross Profit AS per Financial Year:  " required>
+
+  <label for="Net Profit AS per Financial Year:">Net Profit AS per Financial Year:</label>
+  <input type="number" id="Age of Business" name="Age of Business" placeholder="Net Profit AS per Financial Year:  " required>
+
+  <label for="Describe your business in brief:  ">Describe your business in brief:</label>
+  <textarea name="Description" id="Description"></textarea> 
+
+                <div class="terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the Terms & Conditions</label>
+                </div>
+                
+                <button type="submit" class="signup-btn grow">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="login.html">Sign in</a></p>
+            <p>Want to Signup as a INVESTOR? <a href="investorsignup.html">Sign in</a></p>
+
+        </div>
+    </div>
+</body>
+</html>
